@@ -37,3 +37,32 @@ body {
 .navbar-dark {
     background-color: #512DA8;
 }
+
+.promotions {
+    align-items: center;
+}
+
+.custom-header {
+    background-color: orange;
+    color: white;
+    font-size: 24px;
+}
+
+.reserve-btn-wrapper {
+    text-align: right;
+}
+
+.custom-reserve-btn {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.reserve-btn {
+    margin-left: 17%;
+    margin-top: 2%;
+}
+
+.card-wrapper {
+    width: 60%;
+    margin: 3% auto;
+}
