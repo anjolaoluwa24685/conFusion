@@ -35,7 +35,7 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a onclick="toggleLogInModal()">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -98,18 +98,17 @@
                 <div class="col-12 col-sm align-self-center">
 
 
-                    <button type="button" class="btn btn-warning custom-reserve-btn" data-toggle="modal"
-                        data-target="#exampleModal">
+                    <button type="button" class="btn btn-warning custom-reserve-btn" onclick="toggleReserveModal()">
                         Reserve Table
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog custom-modal" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title custom-modal-title" id="exampleModalLabel">Reserve Table</h5>
+                                    <h5 class="modal-title custom-modal-title" id="exampleModalLabel">Reserve a Table</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -316,67 +315,6 @@
 
             </div>
         </div>
-        <!-- <form class="card-wrapper" id="reserve-table">
-            <div class="card">
-                <div class="card-header custom-header">
-                    Reserve a Table
-                </div>
-                <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <label>Number of Guests</label>
-                            </div>
-                            <div class="col-sm-10">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
-                                </div>
-
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio4" value="option4">
-                                    <label class="form-check-label" for="inlineRadio4">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio5" value="option5">
-                                    <label class="form-check-label" for="inlineRadio5">5</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio6" value="option6">
-                                    <label class="form-check-label" for="inlineRadio6">6</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <label>Date and Time</label>
-                            </div>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control"
-                                    placeholder="Date">
-
-                            </div>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control"
-                                    placeholder="Time">
-                            </div>
-                        </div>
-
-        </form> -->
-        <!-- <a href="#" class="btn btn-primary reserve-btn">Reserved</a> -->
     </div>
     </div>
     </div>
@@ -451,6 +389,14 @@
                 }
             });
         });
+
+        const toggleReserveModal = () => {
+            $('#reserveModal').modal('toggle')
+        }
+
+        const toggleLogInModal = () => {
+            $('#loginModal').modal('toggle')
+        }
     </script>
     <!-- <Script>
         $(document).ready(function() {
