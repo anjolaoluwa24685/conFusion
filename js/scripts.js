@@ -14,10 +14,10 @@ $(document).ready(function(){
     });
 });
 
-const toggleReserveModal = () => {
+function toggleReserveModal() {
     $('#reserveModal').modal('toggle')
 }
 
-const toggleLogInModal = () => {
+function toggleLogInModal() {
     $('#loginModal').modal('toggle')
 }
