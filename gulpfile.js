@@ -35,7 +35,7 @@ gulp.task('sass', function () {
        server: {
            baseDir: "./"
       },
-      browser: "chrome"
+      browser: ["chrome.exe"]
      });
   
   });
