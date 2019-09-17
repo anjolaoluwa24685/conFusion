@@ -32,9 +32,10 @@ gulp.task('sass', function () {
   
      browserSync.init(files, {
        open: 'external',
-        server: {
+       server: {
            baseDir: "./"
-        }
+      },
+      browser: "chrome"
      });
   
   });
