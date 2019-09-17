@@ -31,11 +31,10 @@ gulp.task('sass', function () {
      ]; 
   
      browserSync.init(files, {
-       open: 'external',
-       server: {
+        port: process.env.PORT || 3000,
+        server: {
            baseDir: "./"
-      },
-      browser: ["chrome.exe"]
+         }
      });
   
   });
